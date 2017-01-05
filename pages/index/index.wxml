@@ -3,7 +3,7 @@
 <view class="container">
   <view class="title gray_color">
     <block wx:for="{{array}}">
-      <view class="select-item" bindtap="expandList" id="{{index}}">
+      <view class="select-item" bindtap="expandList" id="{{index}}" data-item="{{item}}">
         {{item.message}}
       </view>
     </block>
@@ -11,7 +11,7 @@
   <view class="line-hor"></view>
   <scroll-view   class="scroll-view_item-list gray_color {{isShow ? 'show' : 'hide'}}"  scroll-y="true" >
      <block wx:for="{{item_list}}">
-      <view class="item-column" bindtap="" id="{{index}}">
+      <view class="item-column" bindtap="clickItem" id="{{index}}">
         {{item.dicNmae}}
       </view>
       <view class="line-hor"> </view>

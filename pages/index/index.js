@@ -81,7 +81,7 @@ var params = {
     console.log(params.data.array);
 
     var index = event.target.id;
-
+    showSuccessToast(event.target.dataset.item.message);
     if ( params.data.first_index == index && params.data.isShow) {
       params.data.first_index = -1;
       this.setData({ isShow: false, item_list: [] });
@@ -94,8 +94,11 @@ var params = {
 
 
     // this.Page(params)
-  }
+  },
 
+clickItem: function (event){
+
+}
 
 
 
