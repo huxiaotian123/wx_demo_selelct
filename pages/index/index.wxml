@@ -1,0 +1,20 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="title gray_color">
+    <block wx:for="{{array}}">
+      <view class="select-item" bindtap="expandList" id="{{index}}">
+        {{item.message}}
+      </view>
+    </block>
+  </view>
+  <view class="line-hor"></view>
+  <scroll-view   class="scroll-view_item-list gray_color {{isShow ? 'show' : 'hide'}}"  scroll-y="true" >
+     <block wx:for="{{item_list}}">
+      <view class="item-column" bindtap="" id="{{index}}">
+        {{item.dicNmae}}
+      </view>
+      <view class="line-hor"> </view>
+    </block>
+  </scroll-view>
+</view>
